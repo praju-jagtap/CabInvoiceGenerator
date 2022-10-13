@@ -11,6 +11,10 @@
             Ride[] ride = { new Ride(1, 2), new Ride(3, 4) };                               //UC2
             double getMultiple = cabInvoiceGenerator.GetMultipleRideFare(ride);
             Console.WriteLine("\nThe Aggregate Total For All : " + getMultiple);
+
+            Ride[] ridedata = { new Ride(1, 2), new Ride(3, 4) };                                    //UC3
+            InvoiceSummary data = cabInvoiceGenerator.GetAverageFare(ridedata);
+            Console.WriteLine("\nThe Average Fare : " + data.averageFare + "\nThe Total Number Of Rides: " + data.noOfRides);
         }
     }
 }
